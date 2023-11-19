@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Order Form</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- Include external JavaScript file with defer attribute -->
+    <script src="./js/scripts.js" defer></script>
+</head>
+<body>
+
+    <!-- Pizza Order Form -->
+    <form action="#" method="post">
+        <!-- Form heading -->
+        <h2>Pizza Order Form</h2>
+
+        <!-- Name input field -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <!-- Email input field -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <!-- Phone input field -->
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <!-- Pizza size selection -->
+        <label for="pizza-size">Pizza Size:</label>
+        <select id="pizza-size" name="pizza-size" required>
+            <option value="" disabled selected hidden>Select size</option>
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+        </select>
+
+        <!-- Toppings checkboxes -->
+        <label>Toppings (select one or more):</label>
+        <input type="checkbox" id="pepperoni" name="toppings[]" value="pepperoni">
+        <label for="pepperoni">Pepperoni</label>
+
+        <input type="checkbox" id="sausage" name="toppings[]" value="sausage">
+        <label for="sausage">Sausage</label>
+
+        <input type="checkbox" id="mushrooms" name="toppings[]" value="mushrooms">
+        <label for="mushrooms">Mushrooms</label>
+
+        <!-- Special instructions textarea -->
+        <label for="instructions">Special Instructions:</label>
+        <textarea id="instructions" name="instructions" rows="4"></textarea>
+
+        <!-- Submit button -->
+        <button type="submit" onclick="captureOrder(event)">Place Order</button>
+    </form>
+
+    <!-- Container for displaying pizza description -->
+    <div id="pizza-description"></div>
+
+</body>
+</html>
